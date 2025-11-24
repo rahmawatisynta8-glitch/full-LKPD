@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <p id="paragraf">Ini adalah paragraf awal.</p>
+    <div id="container"></div>
+    <button onclick="aksiGabungan()">Klik Saya</button>
+
+    <script>
+      function aksiGabungan() {
+        // Mengubah warna paragraf
+        document.getElementById("paragraf").style.color = "blue";
+
+        // Menambahkan elemen baru ke div
+        let div = document.getElementById("container");
+        let paragrafBaru = document.createElement("p");
+        paragrafBaru.innerHTML = "Ini elemen baru yang ditambahkan!";
+        paragrafBaru.style.color = "red"; // bisa diberi warna berbeda
+        div.appendChild(paragrafBaru);
+      }
+    </script>
+  </body>
+</html>
