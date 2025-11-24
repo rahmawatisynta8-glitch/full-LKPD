@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Counter & Sembunyikan Paragraf</h2>
+
+    <!-- Counter -->
+    <p>Jumlah klik tombol Counter: <span id="jumlah">0</span></p>
+    <button onclick="tambahCounter()">Tambah Counter</button>
+
+    <hr>
+
+    <!-- Sembunyikan Paragraf -->
+    <p id="paragrafSembunyi">Ini paragraf yang bisa disembunyikan.</p>
+    <button onclick="sembunyikanParagraf()">Sembunyikan Paragraf</button>
+
+    <script>
+      // Counter
+      let hitung = 0;
+      function tambahCounter() {
+        hitung++;
+        document.getElementById("jumlah").innerHTML = hitung;
+      }
+
+      // Sembunyikan Paragraf
+      function sembunyikanParagraf() {
+        document.getElementById("paragrafSembunyi").style.display = "none";
+      }
+    </script>
+  </body>
+</html>
