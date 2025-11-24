@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2>Game Tebak Angka</h2>
+
+    <input type="number" id="tebakan" placeholder="Masukkan angka 1–10">
+    <button onclick="cekTebakan()">Coba!</button>
+    <button onclick="resetGame()">Reset</button>
+    <p id="hasil"></p>
+
+    <script>
+      // Fitur dasar: angka acak
+      let angkaBenar = Math.floor(Math.random() * 10) + 1;
+
+      function cekTebakan() {
+        let tebakan = parseInt(document.getElementById("tebakan").value);
+        let pesan = "";
+
+        // Validasi input
+        if (isNaN(tebakan) || tebakan < 1 || tebakan > 10) {
+          pesan = "Masukkan angka antara 1–10!";
+        } else if (tebakan === angkaBenar) {
+          pesan = "Tebakan kamu BENAR ✅";
+        } else if (tebakan < angkaBenar) {
+          pesan = "Tebakan terlalu kecil, coba lagi!";
+        } else {
+          pesan = "Tebakan terlalu besar, coba lagi!";
+        }
+
+        document.getElementById("hasil").innerHTML = pesan;
+      }
+
+      // Fitur tambahan: Reset game
+      function resetGame() {
+        angkaBenar = Math.floor(Math.random() * 10) + 1; // buat angka baru
+        document.getElementById("tebakan").value = "";
+        document.getElementById("hasil").innerHTML = "";
+      }
+    </script>
+  </body>
+</html>
