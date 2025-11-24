@@ -1,20 +1,34 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width>, initial-scale=1.0">
-    <title>Document</title>
+    <title>Latihan JavaScript</title>
 </head>
 <body>
+    <h2>Latihan JavaScript</h2>
+
     <script>
-         let nama = "Synta";
-         let umur = 15;
-         let isStudent = true;
-         console.log(nama, umur, isStudent);
-         document.write(" Halo, nama saya " + nama );
-        let umurSaya =parseInt(prompt("masukan umur"));
-        alert ("umur saya " + umurSaya)
-        document.write("<br> umur saya " + umurSaya);
+        // 1. Menampilkan nama menggunakan document.write()
+        let nama = "Synta"; // ganti dengan nama kamu
+        document.write("Halo, nama saya " + nama + "<br>");
+
+        // 2. Meminta umur menggunakan prompt() dan menampilkan alert
+        let umur = prompt("Masukkan umur kamu:");
+        alert("Umur saya " + umur + " tahun");
+
+        // 3. Perhitungan sederhana: penjumlahan dua angka
+        let angka1 = prompt("Masukkan angka pertama:");
+        let angka2 = prompt("Masukkan angka kedua:");
+
+        // Konversi input dari string ke number
+        let hasil = Number(angka1) + Number(angka2);
+
+        // Menampilkan hasil penjumlahan
+        alert("Hasil penjumlahan: " + hasil);
+    </script>
+</body>
+</html>
+
     </script>
 </body>
 </html>
